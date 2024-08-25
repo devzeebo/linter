@@ -1,0 +1,11 @@
+{
+  "name": "linter",
+  "workspaces": [
+    "packages/domain",
+    "packages/engine",
+    "packages/parser-typescript"
+  ],
+  "scripts": {
+    "build": "tsc -b tsconfig.json"
+  }
+}

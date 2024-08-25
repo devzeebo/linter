@@ -1,0 +1,7 @@
+{
+  "name": "@linter/engine",
+  "version": "1.0.0",
+  "devDependencies": {
+    "@types/node": "^22.5.0"
+  }
+}

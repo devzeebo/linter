@@ -1,0 +1,7 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "composite": true,
+    "esModuleInterop": true
+  }
+}
