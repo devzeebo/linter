@@ -3,9 +3,13 @@
   "workspaces": [
     "packages/domain",
     "packages/engine",
-    "packages/parser-typescript"
+    "packages/parser-typescript",
+    "packages/reporter-console",
+    "packages/rules-typescript"
   ],
   "scripts": {
-    "build": "tsc -b tsconfig.json"
+    "build": "tsc -b tsconfig.build.json",
+    "build:watch": "npm run build -- --watch",
+    "test": "npm -w packages/engine run test"
   }
 }

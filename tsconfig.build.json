@@ -1,0 +1,21 @@
+{
+    "extends": "./tsconfig.json",
+    "files": [],
+    "references": [
+        {
+            "path": "./packages/domain"
+        },
+        {
+            "path": "./packages/engine"
+        },
+        {
+            "path": "./packages/parser-typescript"
+        },
+        {
+            "path": "./packages/reporter-console"
+        },
+        {
+            "path": "./packages/rules-typescript"
+        },
+    ]
+}

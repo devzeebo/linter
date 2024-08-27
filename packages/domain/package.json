@@ -1,7 +1,11 @@
 {
-  "name": "@linter/engine",
+  "name": "@linter/domain",
   "version": "1.0.0",
   "devDependencies": {
     "@types/node": "^22.5.0"
-  }
+  },
+  "files": [
+    "lib/"
+  ],
+  "types": "lib/index.d.ts"
 }

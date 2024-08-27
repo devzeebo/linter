@@ -1,6 +1,10 @@
 {
   "name": "@linter/parser-typescript",
   "version": "1.0.0",
+  "main": "lib/index.js",
+  "files": [
+    "lib/**/*"
+  ],
   "devDependencies": {
     "@types/node": "^22.5.0",
     "typescript": "^5.5.4"

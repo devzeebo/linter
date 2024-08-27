@@ -1,8 +1,20 @@
 {
-  "name": "@linter/domain",
+  "name": "@linter/engine",
   "version": "1.0.0",
   "devDependencies": {
+    "@types/lodash": "^4.17.7",
     "@types/node": "^22.5.0",
     "typescript": "^5.5.4"
+  },
+  "main": "lib/index.js",
+  "files": [
+    "lib/**/*"
+  ],
+  "scripts": {
+    "test": "node --experimental-require-module lib/index.js"
+  },
+  "dependencies": {
+    "generic-pool": "^3.9.0",
+    "lodash": "^4.17.21"
   }
 }

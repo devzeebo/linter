@@ -1,5 +1,5 @@
 import tsc, { Node, ScriptTarget, SourceFile, SyntaxKind } from 'typescript';
-import { Statement } from '@linter/engine/src/domain/Statement';
+import { Statement } from '@linter/domain';
 import fs from 'fs';
 import path from 'path';
 
@@ -15,9 +15,11 @@ function* printRecursiveFrom(
 
   yield { text: nodeText, type: syntaxKind } satisfies Statement
 
-  yield* node.forEachChild(child =>
-    printRecursiveFrom(child, indentLevel + 1, sourceFile)
-  );
+  if (node.getChildCount(sourceFile) > 0) {
+    for (let child of node.getChildren(sourceFile)) {
+      yield* printRecursiveFrom(child, indentLevel + 1, sourceFile)
+    };
+  }
 }
 
 function* parse(text: string, filename: string) {
